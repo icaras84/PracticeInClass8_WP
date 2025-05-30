@@ -7,13 +7,13 @@ on:
   pull_request:
     branches:
       - main
-
   workflow_dispatch:
-    jobs:
-      hello:
-        runs_on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          - name: Hello
-            run: echo "Hello world"
-            shell: bash
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello
+        run: echo "Hello world!"
+        shell: bash
