@@ -1,0 +1,19 @@
+name: Hello World 2
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HelloWorld2
+        run: echo "Hello world 2"
+        shell: bash
